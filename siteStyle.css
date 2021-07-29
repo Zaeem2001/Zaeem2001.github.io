@@ -39,16 +39,6 @@ nav a:hover {
   height: auto;
 }
 
-.icon2 {
-  top: 1vw;
-  padding: 1vw 1vw 1vw 1vw;
-  background-color: red;
-  border-radius: 4vw;
-  width: 3vw;
-  max-width: 128px;
-  height: auto;
-}
-
 #welcome{
   display: grid;
   justify-items: center;
@@ -114,8 +104,25 @@ nav a:hover {
 }
 
 #contact{
-  display: grid;
-  grid-template-columns: 3% 6% 30% 6% 30% 6% 20%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.icon2 {
+  top: 1vw;
+  padding: 1vw 1vw 1vw 1vw;
+  background-color: red;
+  border-radius: 4vw;
+  width: 3vw;
+  max-width: 128px;
+  height: auto;
+}
+
+.contact-item{
+  display: flex;
+  column-gap: 1vw;
+  flex: 30%;
 }
 
 #projects{
@@ -125,7 +132,7 @@ nav a:hover {
   text-align: center;
 }
 
-.box-item {
+.project-item {
   flex: 45%;
   padding: 50px 0 50px 0;
   background-color: red;
@@ -212,6 +219,21 @@ p{
 
   #welcomeText{
     font-size: 10vw;
+  }
+
+  #contact {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact-item{
+    flex: 100%;
+  }
+
+  .icon2 {
+    padding: 2vw 2vw 2vw 2vw;
+    border-radius: 10vw;
+    width: 7vw;
   }
 
   #projects {
