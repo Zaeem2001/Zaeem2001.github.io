@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Zaeem's Website</title>
+  <meta name="author" content="Muhammad Zaeem Ghauri">
+  <meta name="keywords" content="personal website, portfolio, portfolio website">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Roboto|Oswald" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="siteStyle.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="home"></div>
+    <nav id="navbar">
+      <a href="#"></a>
+      <a href="#home">HOME</a>
+      <a href="#aboutme">ABOUT ME</a>
+      <a href="#contact">CONTACT</a>
+      <a href="#">PROJECTS</a>
+      <a href="assets/zaeem-resume.pdf" target="_blank">RESUME</a>
+      <a href="https://www.linkedin.com/in/zaeemghauri/" target="_blank"><img src="assets/linkedinlogo.png" alt="LinkedIn Logo" class="icon"></a>
+      <a href="https://github.com/Zaeem2001" target="_blank"><img src="assets/githublogo.png" alt="GitHub Logo" class="icon"></a>
+    </nav>
+    <div id="welcome">
+    <script>
+    $(document).ready(function() {
+          $(window).scroll(function() {
+          if ($(document).scrollTop() > 50) {
+            $("#language1").animate({right: '1000px'}, 3000);
+            $("#language2").animate({right: '1000px'}, 2500);
+            $("#language3").animate({left: '1000px'}, 2500).fadeOut();
+            $("#language4").animate({left: '1000px'}, 3000).fadeOut();
+            $("#welcomeText").fadeIn(3000);
+            }
+          });
+    });
+    </script>
+    <div id="language1">
+       Welkom 欢迎
+      <div id="language2">
+        أهلا بك Willkommen
+      </div>
+       Bienvenu ようこそ
+    </div>
+    <div id="language3">
+      Bienvenidos خوش آمدید
+      <div id="language4">
+        환영하다 Benvenuto
+      </div>
+      Добро пожаловать स्वागत
+    </div>
+    <div id="welcomeText">
+      Welcome!
+    </div>
+  </div>
+    <div id="aboutme">
+      <h1>
+        ABOUT ME
+      </h1>
+      <p style="grid-column: 1/3">
+        Hello! My name is Zaeem Ghauri, and I’m a 3rd year computer engineering student at McMaster University, ON. With the world currently in a pandemic, everything for the past couple years has been extraordinary and quite difficult. As a student, one thing I’ve had a lot of difficulty with is finding a job. With most businesses going under and workers being laid off, it's no wonder. Still, I was determined to make the most of my summer.
+      </p>
+      <p style="grid-column: 1/3">
+        I started with making a list of goals that I wanted to achieve by the end of the summer, whether they be for entertainment, health, or education. I also took a full-time summer school load to get ahead in my education. Most importantly, I wanted to expand my skill set as an engineer and build a portfolio to showcase what I’ve taught myself. I began with purchasing an Arduino starter kit and designing small-scale Arduino microcontroller projects. Eventually I turned my focus to larger, more intricate projects that demanded more of my skills. In order to showcase what I’ve worked on, I’ve built my own website (this one, right here!) from scratch. I taught myself HTML and CSS through free online resources such as freeCodeCamp and W3schools. I hope you enjoy the projects I’ve showcased!
+      </p>
+    </div>
+    <div id="contact">
+      <h1 style="grid-column: 1/3">
+        CONTACT
+      </h1>
+      <p style="grid-column: 1;">
+      <img src="assets/email.png" alt="Icon for email" class="icon2">
+      </p>
+      <p style="grid-column: 2/3; padding-top: 0.75vw">
+        <span style="font-family: Oswald; color: red;">EMAIL: </span>
+        zaeemghauri@gmail.com
+      </p>
+      <p style="grid-column: 3;">
+      <img src="assets/phone.jpg" alt="Icon for telephone" class="icon2">
+      </p>
+      <p style="grid-column: 4/5; padding-top: 1vw">
+        <span style="font-family: Oswald; color: red;">PHONE: </span>
+        (705)-500-7383
+      </p>
+      <p style="grid-column: 5;">
+      <img src="assets/resume.jpg" alt="Icon for resume doc" class="icon2">
+      </p>
+      <p style="grid-column: 6/7;  padding-top: 1vw; font-family: Oswald">
+        <a href="assets/zaeem-resume.pdf" target="_blank">RESUME</a>
+      </p>
+    </div>
+    <h1>
+      PROJECTS
+    </h1>
+    <div id="projects">
+      <p class="box-item">PROJECT 1</p>
+      <p class="box-item">PROJECT 2</p>
+      <p class="box-item">PROJECT 3</p>
+      <p class="box-item">PROJECT 4</p>
+      <p class="box-item">PROJECT 5</p>
+      <p class="box-item">PROJECT 6</p>
+    </div>
+  </div>
+  </body>
+  </html>
