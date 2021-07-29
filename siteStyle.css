@@ -1,0 +1,172 @@
+html{
+  scroll-behavior: smooth;
+}
+body{
+  min-height: 300vh;
+}
+
+#navbar{
+  display: grid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  grid-template-columns: 38% 10% 12% 10% 10% 10% 5% 5%;
+  justify-items: center;
+  width: 100%;
+  background-color: white;
+  border-bottom-style: solid;
+  border-color: red;
+  font-size: 1.25vw;
+  font-family: Comfortaa;
+  z-index: 1;
+}
+
+nav a {
+  text-decoration: none;
+  align-self: center;
+  color: red;
+  padding: 8px 8px 1.5vw 8px;
+}
+
+nav a:hover {
+  text-decoration: none;
+  background-color: red;
+  color: white;
+}
+
+.icon {
+  position: relative;
+  padding: 0;
+  width: 2vw;
+  max-width: 128px;
+  height: auto;
+}
+
+.icon2 {
+  top: 1vw;
+  padding: 1vw 1vw 1vw 1vw;
+  background-color: red;
+  border-radius: 4vw;
+  width: 3vw;
+  max-width: 128px;
+  height: auto;
+}
+
+#welcome{
+  display: grid;
+  justify-items: center;
+  top: 30vh;
+  width: 100%;
+  grid-template-columns: 8vw 40vw 40vw 5vw;
+  grid-template-rows: 10vw 30vw;
+  grid-template-areas:
+  ". . . ."
+  ". quad1 quad2 ."
+}
+
+#language1{
+  position: relative;
+  grid-area: quad1;
+  font-size: 5vw;
+  font-family: Oswald;
+  color: red;
+  top: 10%;
+}
+
+#language2{
+  position: relative;
+  grid-area: quad1;
+  font-size: 4vw;
+  font-family: Oswald;
+  color: black;
+}
+
+#language3{
+  position: relative;
+  grid-area: quad2;
+  font-size: 4vw;
+  font-family: Oswald;
+  color: black;
+  top: 10%;
+}
+
+#language4{
+  position: relative;
+  grid-area: quad2;
+  font-size: 4.5vw;
+  font-family: Oswald;
+  color: red;
+}
+
+#welcomeText{
+  grid-column: 2/4;
+  grid-row: 2;
+  justify-self: center;
+  align-self: center;
+  font-size: 4vw;
+  font-family: Oswald;
+  color: red;
+  display: none;
+}
+
+#aboutme{
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+#contact{
+  display: grid;
+  grid-template-columns: 6% 30% 6% 30% 6% 20%;
+}
+
+#projects{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.box-item {
+  flex: 45%;
+  padding: 50px 0 50px 0;
+  background-color: red;
+  font-family: Roboto;
+  color: white;
+  border-style: double;
+  border-width: 10px;
+  border-color: white;
+}
+
+@media (max-width: 800px) {
+  #projects {
+    flex-direction: column;
+  }
+  .box-item {
+    flex: 100%;
+  }
+}
+
+p a {
+  text-decoration: none;
+  color: red;
+}
+
+p a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+h1{
+  position: sticky;
+  grid-column: 1/1;
+  top: 0;
+  z-index: 2;
+  font-size: 3vw;
+  font-family: Oswald;
+  color: red;
+}
+
+p{
+  font-size: 1.5vw;
+  font-family: Roboto;
+}
