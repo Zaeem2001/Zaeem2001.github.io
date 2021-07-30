@@ -125,32 +125,38 @@ nav a:hover {
   flex: 30%;
 }
 
+.links {
+  text-decoration: none;
+  color: red;
+}
+
+.links:hover {
+  text-decoration: none;
+  color: black;
+}
+
 #projects{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  text-align: center;
+  justify-content: center;
 }
 
 .project-item {
-  flex: 45%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 45%;
   padding: 50px 0 50px 0;
   background-color: red;
   font-family: Roboto;
-  color: white;
   border-style: double;
   border-width: 10px;
   border-color: white;
 }
 
-p a {
-  text-decoration: none;
-  color: red;
-}
-
-p a:hover {
-  text-decoration: none;
-  color: black;
+.project-item:hover {
+  font-size: 3vw;
 }
 
 h1{
@@ -240,7 +246,11 @@ p{
     flex-direction: column;
   }
 
-  .box-item {
-    flex: 100%;
+  .project-item {
+    width: 100%;
+  }
+
+  .project-item:hover {
+    font-size: 5vw;
   }
 }
