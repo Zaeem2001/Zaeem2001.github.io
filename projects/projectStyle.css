@@ -1,0 +1,76 @@
+body{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-row-gap: 10%;
+  grid-template-areas:
+  "header header"
+  ". ."
+  "description picture"
+  "slideshow slideshow"
+  "notes notes"
+  "footer footer";
+}
+
+h1{
+  position: sticky;
+  top: 10px;
+  z-index: 2;
+  font-size: 3vw;
+  font-family: Oswald;
+  color: red;
+}
+
+p{
+  font-size: 1.5vw;
+  font-family: Roboto;
+}
+
+#header{
+  position: fixed;
+  grid-area: header;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  border-bottom-style: solid;
+  border-color: red;
+  font-size: 5vw;
+  font-family: Oswald;
+  color: red;
+  z-index: 1;
+}
+
+.arrow{
+  width: 4vw;
+  max-width: 128px;
+  height: auto;
+}
+
+#description{
+  grid-area: description;
+}
+
+#picture{
+  grid-area: picture;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.img{
+  padding: 20px 20px 20px 20px;
+  background-color: red;
+}
+
+#slideshow{
+  grid-area: slideshow;
+}
+
+#notes{
+  grid-area: notes;
+}
+
+footer{
+  grid-area: footer;
+}
