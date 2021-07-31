@@ -1,7 +1,11 @@
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-row-gap: 10%;
+  grid-row-gap: 5%;
   grid-template-areas:
   "header header"
   ". ."
@@ -38,13 +42,8 @@ p{
   font-size: 5vw;
   font-family: Oswald;
   color: red;
+  font-weight: bold;
   z-index: 1;
-}
-
-.arrow{
-  width: 4vw;
-  max-width: 128px;
-  height: auto;
 }
 
 #description{
@@ -56,6 +55,7 @@ p{
   display: flex;
   justify-content: center;
   align-self: center;
+  overflow: hidden;
 }
 
 .img{
@@ -67,10 +67,112 @@ p{
   grid-area: slideshow;
 }
 
+.mySlides {
+  display: none;
+  text-align: center;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: red;
+  border-style: double;
+  border-width: 10px;
+  border-color: white;
+  padding: 10px 5px;
+  color: white;
+  font-size: 1.5vw;
+  font-family: Roboto;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  text-align: center;
+  width: 16.66%;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
 #notes{
   grid-area: notes;
 }
 
 footer{
   grid-area: footer;
+  width: 100%;
+  background-color: white;
+  border-top-style: solid;
+  border-color: red;
+  text-align: center;
+}
+
+.footer-text{
+  font-size: 1vw;
+  font-family: Roboto;
+  color: red;
+}
+
+.arrow{
+  width: 3vw;
+  max-width: 128px;
+  height: auto;
+  padding-top: 1vw;
+}
+
+@media (max-width: 800px) {
+
+  body{
+    grid-template-areas:
+    "header header"
+    ". ."
+    "description description"
+    "slideshow slideshow"
+    "notes notes"
+    "footer footer";
+  }
+
+  h1{
+    font-size: 5.5vw;
+  }
+
+  p{
+    font-size: 3vw;
+  }
+
+  #header{
+    font-size: 6vw;
+  }
+
+  .img{
+    padding: 0 50% 0 50%;
+    background-color: red;
+  }
+
+  .caption-container {
+    font-size: 1vw;
+  }
+
+  .footer-text{
+    font-size: 2vw;
+  }
+
+  .arrow{
+    width: 5vw;
+  }
 }
