@@ -60,7 +60,22 @@ p{
 
 .img{
   padding: 20px 20px 20px 20px;
-  background-color: red;
+  background-color: white;
+  border-style: double;
+  border-width: thick;
+  border-color: red;
+  max-width: 800px;
+  max-height: 800px;
+}
+
+.playerpicsh{
+  width: 40vw;
+  height: 18vw;
+}
+
+.playerpicsv{
+  width: 30vw;
+  height: 40vw;
 }
 
 #slideshow{
@@ -161,8 +176,18 @@ footer{
   }
 
   .img{
-    padding: 0 50% 0 50%;
-    background-color: red;
+    max-width: 1000px;
+    max-height: 1000px;
+  }
+
+  .playerpicsh{
+    width: 88vw;
+    height: 40vw;
+  }
+
+  .playerpicsv{
+    width: 60vw;
+    height: 80vw;
   }
 
   .caption-container {
