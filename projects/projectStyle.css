@@ -11,6 +11,7 @@ body{
   ". ."
   "description picture"
   "slideshow slideshow"
+  "demo demo"
   "notes notes"
   "footer footer";
 }
@@ -124,8 +125,20 @@ p{
   opacity: 1;
 }
 
+#demo{
+  grid-area: demo;
+  text-align: center;
+  padding-bottom: 25vw;
+}
+
+.video{
+  width: 50%;
+  height: 200%;
+}
+
 #notes{
   grid-area: notes;
+  flex-shrink: 2%;
 }
 
 footer{
@@ -159,6 +172,7 @@ footer{
     "description description"
     "picture picture"
     "slideshow slideshow"
+    "demo demo"
     "notes notes"
     "footer footer";
   }
@@ -192,6 +206,15 @@ footer{
 
   .caption-container {
     font-size: 1vw;
+  }
+
+  #demo{
+    padding-bottom: 20vw;
+  }
+
+  .video{
+    width: 50%;
+    height: 150%;
   }
 
   .footer-text{

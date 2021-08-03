@@ -21,16 +21,15 @@
         Description
       </h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet eros elit.
-        Integer eu tincidunt ipsum. Maecenas ipsum purus, sagittis ut leo a, eleifend fringilla quam.
-        Sed imperdiet vestibulum purus, a vulputate sapien facilisis nec. Phasellus facilisis vitae risus eget imperdiet.
-        Fusce at bibendum felis, nec viverra sapien. Ut quis quam id enim aliquam fermentum. Aenean lobortis varius lectus, a posuere justo condimentum sit amet.
-        Proin condimentum eros ut eros finibus volutpat. Aenean pharetra eleifend lorem, ut dictum tortor interdum eget. Quisque sed malesuada nisi, id efficitur ipsum. In rhoncus sapien velit, sed sagittis risus congue faucibus.
-
-        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-        Praesent augue orci, ultricies nec quam sit amet, ultricies fringilla magna. Nullam viverra pharetra volutpat.
-        Proin sed feugiat purus. Cras tempor varius viverra. Morbi vitae nulla feugiat dolor tincidunt tincidunt sit amet vitae magna.
-        Maecenas elit velit, malesuada sit amet hendrerit sed, viverra et libero.
+        This is a device that allows the user to control their Spotify music playback with the help of Arduino and Python.
+        It allows the user to choose their playlist, go back and forth between songs, pause/resume playback, and control the volume all from their fingertips.
+        During playback, the LCD will also flash the name of the song being played as well as the artist(s) that made it.
+      </p>
+      <p>
+        The device works by having the Arduino send an instruction to Python which sends a request to the Spotify web server allowing for changes in your music playback.
+        Each button on the board is wired to a different Arduino digital input pin allowing for the Arduino to distinguish each button press from the other.
+        After a button is pressed, the Arduino will send the corresponding instruction to Python through UART communication.
+         Python will then decipher the instruction and perform the corresponding action through JSON request to/from the Spotify web server.
       </p>
     </div>
     <div id="picture">
@@ -44,7 +43,7 @@
         <img src="playerpics/top.jpg" class="img playerpicsh">
       </div>
       <div class="mySlides">
-        <img src="playerpics/top.jpg" class="img playerpicsh">
+        <img src="playerpics/disassembled.jpg" class="img playerpicsh">
       </div>
       <div class="mySlides">
         <img src="playerpics/circuit.png" class="img playerpicsh">
@@ -66,7 +65,7 @@
           <img class="demo cursor" src="playerpics/top.jpg" style="width:80%" onclick="currentSlide(1)" alt="Top view of the device assembled">
         </div>
         <div class="column">
-          <img class="demo cursor" src="playerpics/top.jpg" style="width:80%" onclick="currentSlide(2)" alt="Components for the device">
+          <img class="demo cursor" src="playerpics/disassembled.jpg" style="width:80%" onclick="currentSlide(2)" alt="The components for the device (disassembled)">
         </div>
         <div class="column">
           <img class="demo cursor" src="playerpics/circuit.png" style="width:80%" onclick="currentSlide(3)" alt="Circuit diagram">
@@ -82,20 +81,41 @@
         </div>
       </div>
     </div>
+    <div id="demo">
+      <h1 style="text-align: left">
+        Video Demo
+      </h1>
+      <iframe src="https://www.youtube.com/embed/1rUoZUNTtQc" class="video" allowfullscreen></iframe>
+    </div>
     <div id="notes">
       <h1>
         Notes
       </h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet eros elit.
-        Integer eu tincidunt ipsum. Maecenas ipsum purus, sagittis ut leo a, eleifend fringilla quam.
-        Sed imperdiet vestibulum purus, a vulputate sapien facilisis nec. Phasellus facilisis vitae risus eget imperdiet.
-        Fusce at bibendum felis, nec viverra sapien. Ut quis quam id enim aliquam fermentum. Aenean lobortis varius lectus, a posuere justo condimentum sit amet.
-        Proin condimentum eros ut eros finibus volutpat. Aenean pharetra eleifend lorem, ut dictum tortor interdum eget. Quisque sed malesuada nisi, id efficitur ipsum. In rhoncus sapien velit, sed sagittis risus congue faucibus.
+        This is a project I’ve been wanting to work on since the beginning of my summer! A device that allows me to control my Spotify music within hands
+        reach, and without any interruptions to the work I’m doing on my PC. At first I wasn’t sure how exactly I was going to go about doing this.
+        I already knew how to communicate between microcontrollers and Python through my <a href="3dmapper.html" target="_blank">3D Mapper project</a>, but I now had to communicate from Python to my
+        Spotify application. Thankfully, it only took a couple of Google searches for me to learn that my solution was JSON and web requests. I started
+        with <a href="https://www.youtube.com/watch?v=-FsFT6OwE1A&ab_channel=EuanMorgan" target="_blank">this video</a> that taught me to develop an application that uses Python to update your Spotify playlists. With the help of the
+        SpotifyforDevelopers website I understood the extent of what requests I could make and started planning the capabilities of my player.
+      </p>
+      <p>
+        At first the device was just supposed to go back and forth between songs and pause/resume playback. But after scrolling through the
+        SpotifyforDevelopers website I became more ambitious. I decided to add an LCD screen that displays your playback information and allows you to
+        choose your playlist, as well as two buttons to control the volume of your playback. I still plan to make a “lite” version of this project that
+        removes the LCD and volume buttons, but that's not too high up on my priority list.
+      </p>
+      <p>
+        This is another project I’m very pleased with. It was the first “big” project I’ve attempted since the 3D Mapper and I’m glad I found the time to
+        work on and complete it between summer school, friends, and family. Definitely going to make some improvements to this in the future so be sure to
+        come back for an update!
+      </p>
+      <p>
+        Visit my <a href="https://github.com/Zaeem2001/SpotifyMusicPlayer" target="_blank">GitHub repo</a> for the project’s code and more information.
       </p>
     </div>
     <footer>
-      <a href="#"><img src="up.png" alt="arrow pointing up" class="arrow"></a>
+      <a href="#description"><img src="up.png" alt="arrow pointing up" class="arrow"></a>
       <div class="footer-text"> To top of page </div>
     </footer>
   </body>
