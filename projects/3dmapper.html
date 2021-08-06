@@ -21,81 +21,94 @@
         Description
       </h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet eros elit.
-        Integer eu tincidunt ipsum. Maecenas ipsum purus, sagittis ut leo a, eleifend fringilla quam.
-        Sed imperdiet vestibulum purus, a vulputate sapien facilisis nec. Phasellus facilisis vitae risus eget imperdiet.
-        Fusce at bibendum felis, nec viverra sapien. Ut quis quam id enim aliquam fermentum. Aenean lobortis varius lectus, a posuere justo condimentum sit amet.
-        Proin condimentum eros ut eros finibus volutpat. Aenean pharetra eleifend lorem, ut dictum tortor interdum eget. Quisque sed malesuada nisi, id efficitur ipsum. In rhoncus sapien velit, sed sagittis risus congue faucibus.
-
-        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-        Praesent augue orci, ultricies nec quam sit amet, ultricies fringilla magna. Nullam viverra pharetra volutpat.
-        Proin sed feugiat purus. Cras tempor varius viverra. Morbi vitae nulla feugiat dolor tincidunt tincidunt sit amet vitae magna.
-        Maecenas elit velit, malesuada sit amet hendrerit sed, viverra et libero.
+        This is a device that allows the user to perform several 2D scans used to create a 3D mesh of their surroundings. It features a VL531X time of flight (ToF) sensor, a ULN2003 stepper motor,
+        the MSP432E401Y microcontroller, and Python. The ToF sensor measures the distance between itself and a point on an object far away. Each measurement is passed on from the ToF sensor to the
+        microcontroller via I2C communication and then passed on to Python via UART communication. This measurement is used to determine the x and y components of the point. The ToF sensor is mounted
+        on top of the stepper motor to provide a 360° scan and complete a single plane of the render. The device is manually moved forward before each scan in order to account for the change in the
+        z-axis. Finally, all the scans are combined to create and display a 3D mesh which is all done through the Python script.
       </p>
     </div>
     <div id="picture">
-        <img src="https://Zaeem2001.github.io/assets/placeholder.jpg" class="img">
+        <img src="playerpics/device.jpg" class="img playerpicsh">
     </div>
     <div id="slideshow">
       <h1>
         Images
       </h1>
       <div class="mySlides">
-        <img src="https://Zaeem2001.github.io/assets/placeholder.jpg">
+        <img src="playerpics/top.jpg" class="img playerpicsh">
       </div>
       <div class="mySlides">
-        <img src="https://Zaeem2001.github.io/assets/placeholder.jpg">
+        <img src="playerpics/disassembled.jpg" class="img playerpicsh">
       </div>
       <div class="mySlides">
-        <img src="https://Zaeem2001.github.io/assets/placeholder.jpg">
+        <img src="playerpics/circuit.png" class="img playerpicsh">
       </div>
       <div class="mySlides">
-        <img src="https://Zaeem2001.github.io/assets/placeholder.jpg">
+        <img src="playerpics/playlistdemo.jpg" class="img playerpicsv">
       </div>
       <div class="mySlides">
-        <img src="https://Zaeem2001.github.io/assets/placeholder.jpg">
+        <img src="playerpics/songdemo.jpg" class="img playerpicsv">
       </div>
       <div class="mySlides">
-        <img src="https://Zaeem2001.github.io/assets/placeholder.jpg">
+        <img src="playerpics/demo2.jpg" class="img playerpicsv">
       </div>
       <div class="caption-container">
         <p id="caption"></p>
       </div>
       <div class="row">
         <div class="column">
-          <img class="demo cursor" src="https://Zaeem2001.github.io/assets/placeholder.jpg" style="width:50%" onclick="currentSlide(1)" alt="The Woods">
+          <img class="demo cursor" src="playerpics/top.jpg" style="width:80%" onclick="currentSlide(1)" alt="Top view of the device assembled">
         </div>
         <div class="column">
-          <img class="demo cursor" src="https://Zaeem2001.github.io/assets/placeholder.jpg" style="width:50%" onclick="currentSlide(2)" alt="Cinque Terre">
+          <img class="demo cursor" src="playerpics/disassembled.jpg" style="width:80%" onclick="currentSlide(2)" alt="The components for the device (disassembled)">
         </div>
         <div class="column">
-          <img class="demo cursor" src="https://Zaeem2001.github.io/assets/placeholder.jpg" style="width:50%" onclick="currentSlide(3)" alt="Mountains and fjords">
+          <img class="demo cursor" src="playerpics/circuit.png" style="width:80%" onclick="currentSlide(3)" alt="Circuit diagram">
         </div>
         <div class="column">
-          <img class="demo cursor" src="https://Zaeem2001.github.io/assets/placeholder.jpg" style="width:50%" onclick="currentSlide(4)" alt="Northern Lights">
+          <img class="demo cursor" src="playerpics/playlistdemo.jpg" style="width:50%" onclick="currentSlide(4)" alt="Choosing a playlist">
         </div>
         <div class="column">
-          <img class="demo cursor" src="https://Zaeem2001.github.io/assets/placeholder.jpg" style="width:50%" onclick="currentSlide(5)" alt="Nature and sunrise">
+          <img class="demo cursor" src="playerpics/songdemo.jpg" style="width:50%" onclick="currentSlide(5)" alt="Choosing a song">
         </div>
         <div class="column">
-          <img class="demo cursor" src="https://Zaeem2001.github.io/assets/placeholder.jpg" style="width:50%" onclick="currentSlide(6)" alt="Snowy Mountains">
+          <img class="demo cursor" src="playerpics/demo2.jpg" style="width:50%" onclick="currentSlide(6)" alt="Listening to some Marvin Gaye">
         </div>
       </div>
+    </div>
+    <div id="demo">
+      <h1 style="text-align: left">
+        Video Demo
+      </h1>
+      <iframe src="https://www.youtube.com/embed/1rUoZUNTtQc" class="video" allowfullscreen></iframe>
     </div>
     <div id="notes">
       <h1>
         Notes
       </h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet eros elit.
-        Integer eu tincidunt ipsum. Maecenas ipsum purus, sagittis ut leo a, eleifend fringilla quam.
-        Sed imperdiet vestibulum purus, a vulputate sapien facilisis nec. Phasellus facilisis vitae risus eget imperdiet.
-        Fusce at bibendum felis, nec viverra sapien. Ut quis quam id enim aliquam fermentum. Aenean lobortis varius lectus, a posuere justo condimentum sit amet.
-        Proin condimentum eros ut eros finibus volutpat. Aenean pharetra eleifend lorem, ut dictum tortor interdum eget. Quisque sed malesuada nisi, id efficitur ipsum. In rhoncus sapien velit, sed sagittis risus congue faucibus.
+        This is an embedded systems project I worked on as part of my ENGINEER 2DX4 (microcontrollers) course at McMaster during my 2nd year.  It was my first experience working with microcontrollers
+        and building embedded systems so I had a lot of learning to do. At first it was overwhelming, but eventually I got the hang of it and by the end of the semester I had a ton of ideas I wanted
+        to bring to life (like my <a href="spotifyplayer.html" target="_blank">Spotiplayer project</a>). The course definitely evoked my hidden interest in microcontroller projects and now I’m just trying to learn more from the internet, books,
+        or friends that have a lot more experience with the subject.
+      </p>
+      <p>
+        The course itself is new to the Electrical/Computer Engineering program at McMaster (came out last year) so the syllabus is still going through a very experimental phase. That and the fact I
+        took the course during COVID when school was pushed online definitely made some of the content challenging and even unnecessary. Regardless, I’m glad that it was implemented early into the
+        stream to introduce students like me, who’ve never worked with microcontrollers, to the field.
+      </p>
+      <p>
+        I’m also happy with the end result of the device itself. Since the course ended, I have made a few touch ups to the code, making it more clean and flexible, although I haven’t done any
+        major changes to the device’s appearance. At the time I was prioritizing function over form, and hence the device ended up in a shoebox… Either way, make sure to come back for an update on
+        the device’s appearance and some other changes I have in mind.
+      </p>
+      <p>
+        Visit my <a href="https://github.com/Zaeem2001/3DMapper" target="_blank">GitHub repo</a> for the project’s code and more information.
       </p>
     </div>
     <footer>
-      <a href="#"><img src="up.png" alt="arrow pointing up" class="arrow"></a>
+      <a href="#description"><img src="up.png" alt="arrow pointing up" class="arrow"></a>
       <div class="footer-text"> To top of page </div>
     </footer>
   </body>
