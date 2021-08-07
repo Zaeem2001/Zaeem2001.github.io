@@ -69,12 +69,17 @@ p{
   max-height: 800px;
 }
 
-.playerpicsh{
+.imgh{
   width: 40vw;
   height: 20vw;
 }
 
-.playerpicsv{
+.mapimgh{
+  width: 34vw;
+  height: 24vw;
+}
+
+.imgv{
   width: 30vw;
   height: 40vw;
 }
@@ -113,7 +118,7 @@ p{
 .column {
   float: left;
   text-align: center;
-  width: 16.66%;
+  width: 20%;
 }
 
 .demo {
@@ -195,12 +200,17 @@ footer{
     max-height: 1000px;
   }
 
-  .playerpicsh{
+  .imgh{
     width: 88vw;
     height: 40vw;
   }
 
-  .playerpicsv{
+  .mapimgh{
+    width: 74vw;
+    height: 48vw;
+  }
+
+  .imgv{
     width: 60vw;
     height: 80vw;
   }
