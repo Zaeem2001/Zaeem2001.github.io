@@ -37,13 +37,23 @@ p{
   left: 0;
   width: 100%;
   text-align: center;
-  background-color: white;
-  border-bottom-style: solid;
-  border-color: red;
   font-size: 5vw;
   font-family: Oswald;
   color: red;
   font-weight: bold;
+  z-index: 1;
+}
+
+#headerbar{
+  position: fixed;
+  grid-area: header;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 7.5vw;
+  background-color: white;
+  border-bottom-style: solid;
+  border-color: red;
   z-index: 1;
 }
 
@@ -85,7 +95,7 @@ p{
 }
 
 .starimg{
-  width: 200%;
+  width: 30%;
 }
 
 #slideshow{
@@ -175,6 +185,7 @@ footer{
 @media (max-width: 800px) {
 
   body{
+    grid-row-gap: 2%;
     grid-template-areas:
     "header header"
     ". ."
@@ -191,12 +202,20 @@ footer{
     font-size: 5.5vw;
   }
 
+  .smallh1{
+    font-size: 4.5vw;
+  }
+
   p{
     font-size: 3vw;
   }
 
   #header{
     font-size: 6vw;
+  }
+
+  #headerbar{
+    padding-bottom: 10vw;
   }
 
   .img{
@@ -209,7 +228,7 @@ footer{
     height: 40vw;
   }
 
-  .mapimgh{
+  .mapimg{
     width: 74vw;
     height: 48vw;
   }
@@ -219,12 +238,16 @@ footer{
     height: 80vw;
   }
 
+  .starimg{
+    width: 80%;
+  }
+
   .caption-container {
     font-size: 1vw;
   }
 
   #demo{
-    padding-bottom: 20vw;
+    padding-bottom: 30vw;
   }
 
   .video{

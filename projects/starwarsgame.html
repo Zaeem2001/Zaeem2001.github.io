@@ -13,11 +13,12 @@
     <script src="slideshow.js"></script>
   </head>
   <body>
-    <div id="header">
+    <div id="headerbar"></div>
+    <div id="header"  style="left: 13%">
       Star Wars: The Non-Profit Game
     </div>
     <div id="description">
-      <h1>
+      <h1 class="smallh1">
         Description
       </h1>
       <p>
@@ -43,14 +44,14 @@
       </p>
     </div>
     <div id="picture">
-        <img src="stargamepics/menu2.png" class="img starimg">
+        <img src="stargamepics/menu.png" class="img" style="width: 80%">
     </div>
     <div id="slideshow">
-      <h1>
+      <h1 class="smallh1">
         Images
       </h1>
       <div class="mySlides">
-        <img src="stargamepics/menu.png" class="img starimg">
+        <img src="stargamepics/menu2.png" class="img starimg">
       </div>
       <div class="mySlides">
         <img src="stargamepics/shipmenu.png" class="img starimg">
@@ -69,32 +70,52 @@
       </div>
       <div class="row">
         <div class="column" style="width: 20%">
-          <img class="demo cursor" src="stargamepics/menu.png" style="width:50%" onclick="currentSlide(1)" alt="Top view of the device assembled">
+          <img class="demo cursor" src="stargamepics/menu.png" style="width:50%" onclick="currentSlide(1)" alt="The menu screen, read Yoda's words of wisdom!">
         </div>
         <div class="column" style="width: 20%">
-          <img class="demo cursor" src="stargamepics/shipmenu.png" style="width:50%" onclick="currentSlide(2)" alt="The components for the device (disassembled)">
+          <img class="demo cursor" src="stargamepics/shipmenu.png" style="width:50%" onclick="currentSlide(2)" alt="Choose from three ships, all with different stats!">
         </div>
         <div class="column" style="width: 20%">
-          <img class="demo cursor" src="stargamepics/highscore.png" style="width:50%" onclick="currentSlide(3)" alt="Circuit diagram">
+          <img class="demo cursor" src="stargamepics/highscore.png" style="width:50%" onclick="currentSlide(3)" alt="Set a goal for yourself and beat a highscore!">
         </div>
         <div class="column" style="width: 20%">
-          <img class="demo cursor" src="stargamepics/gameplay.png" style="width:50%" onclick="currentSlide(4)" alt="Choosing a playlist">
+          <img class="demo cursor" src="stargamepics/gameplay.png" style="width:50%" onclick="currentSlide(4)" alt="Watch out for all the obstacles!">
         </div>
         <div class="column" style="width: 20%">
-          <img class="demo cursor" src="stargamepics/gameover.png" style="width:50%" onclick="currentSlide(5)" alt="Choosing a song">
+          <img class="demo cursor" src="stargamepics/gameover.png" style="width:50%" onclick="currentSlide(5)" alt="Game over... Will you do again?">
         </div>
       </div>
     </div>
     <div id="demo">
-      <h1 style="text-align: left">
+      <h1 class="smallh1" style="text-align: left">
         Video Demo
       </h1>
-      <iframe src="https://www.youtube.com/embed/1rUoZUNTtQc" class="video" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/HnDimeGH07U" class="video" allowfullscreen></iframe>
     </div>
     <div id="notes">
-      <h1>
+      <h1 class="smallh1">
         Notes
       </h1>
+      <p>
+        This is the project I submitted as my final assignment for my grade 12 computer science class. The class taught the Java language and was my first ever experience with
+        programming. A lot of what I used in the project had to be self-taught or was a quick fix found on Stack Overflow. We weren’t taught about the importance of structure and
+        modularity in code, which I later learned about that summer before 1st year. Despite the lack of programming knowledge and poorly written code, the game plays very well and
+        to this day I'm proud of what I accomplished and so I wanted to share it with others.
+      </p>
+      <p>
+        The class also taught me about the simplicity of programming; how anybody can pick it up and create something amazing and personal to them. For me, that was creating my own
+        video game. And now, 2 years later, I’ve worked on projects such as the <a href="3dmapper.html" target="_blank">3D Mapper</a> and the <a href="spotifyplayer.html" target="_blank">Spotiplayer</a> that use different programming languages, their own libraries, have proper
+        structure, modularity, and a lot of other programming principles I’ve learned since. This class is what set me on my path to study and become a computer engineer. To learn
+        about the resources that are available to everyday people and be able to create things from those resources that I could only dream of.
+      </p>
+      <p>
+        Even though I haven’t worked on any major Java projects since, I’d still like to come back and do a complete overhaul of the game. Maybe with all new, clean, proper code and
+        even a few additions to the gameplay- although that may not be happening for a while. I want to continue to learn about and experience more of the programming tools that are
+        out there right now. Still, make sure you check every now and then for an update on the project in the future.
+      </p>
+      <p>
+        Visit my <a href="https://github.com/Zaeem2001/StarWarsGame" target="_blank">GitHub repo</a> for the project’s code and more information.
+      </p>
     </div>
     <footer>
       <a href="#description"><img src="up.png" alt="arrow pointing up" class="arrow"></a>
