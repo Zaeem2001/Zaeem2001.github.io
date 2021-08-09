@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Star Wars: The Non-Profit Game</title>
+    <meta name="author" content="Muhammad Zaeem Ghauri">
+    <meta name="keywords" content="personal project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="icon" href="C:/Users/zaeem/OneDrive/Documents/GitHub/Zaeem2001.github.io/logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Roboto|Oswald" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="projectStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="slideshow.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      Star Wars: The Non-Profit Game
+    </div>
+    <div id="description">
+      <h1>
+        Description
+      </h1>
+      <p>
+        This is an old school, Galaga-type shooter game but with a Star Wars themed twist. It emulates an old school, Galaga-type shooter but has a
+        Star Wars themed twist. The menu screen greets you with three options and some (cryptic) hints from the legendary Jedi master, Yoda, to help you learn more about the game.
+        Before you start the game, you can choose the ship that best suits your gameplay. The Millenium Falcon (left) is the sturdiest, with a lot more lives, but not so much speed.
+        The X-Wing (right) is the fastest, with not too many lives but a boost in speed combined with a smaller hit box that makes it easier to dodge obstacles. The default ship is the
+        middle ground between the two and probably the best choice for beginners. Maybe you would like to check the highscores and set a goal for yourself before you start the run.
+        The highscores menu reads a text file that stores the players’ name and their respectives scores.
+      </p>
+      <p>
+        Now that you’ve chosen the ship that best suits you and set a goal to conquer, it's time to play the game! The objective of the game is simple; survive as long as possible by
+        avoiding collisions with incoming obstacles.  At the very top of the screen will be a HUD that displays your ammo, current level, lives, and your current score. The spaceship
+        moves with your mouse cursor. Speed up and get a score multiplier by moving the spaceship up the screen, or slow down and play it safe by moving the spaceship down the screen.
+        Left-click your mouse to shoot your ammo and destroy incoming enemy ships, but pay attention to your ammo count! If things start to look bleak and it feels like it might be
+        game over, don’t worry, because you’re not alone! Look out for two power-ups that will help you keep fighting: the heart orb that grants you an extra life, and the shield orb
+        that grants you invulnerability for a limited time.
+      </p>
+      <p>
+        Perhaps the difficulty caught up to you and now it really is game over. In that case, you’ll be taken to a screen where you can enter your name and save your high score,
+        forever etching yourself into the records of time as one of the greatest players to ever play this game. Ok, maybe it's not that grand of a prize… Tell you what, if you can get
+        a highscore above 10000, you’ll get a little surprise! Listen to Yoda’s words of encouragement and ‘do again’ to try and reach that score.
+      </p>
+    </div>
+    <div id="picture">
+        <img src="stargamepics/menu2.png" class="img starimg">
+    </div>
+    <div id="slideshow">
+      <h1>
+        Images
+      </h1>
+      <div class="mySlides">
+        <img src="stargamepics/menu.png" class="img starimg">
+      </div>
+      <div class="mySlides">
+        <img src="stargamepics/shipmenu.png" class="img starimg">
+      </div>
+      <div class="mySlides">
+        <img src="stargamepics/highscore.png" class="img starimg">
+      </div>
+      <div class="mySlides">
+        <img src="stargamepics/gameplay.png" class="img starimg">
+      </div>
+      <div class="mySlides">
+        <img src="stargamepics/gameover.png" class="img starimg">
+      </div>
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+      <div class="row">
+        <div class="column" style="width: 20%">
+          <img class="demo cursor" src="stargamepics/menu.png" style="width:50%" onclick="currentSlide(1)" alt="Top view of the device assembled">
+        </div>
+        <div class="column" style="width: 20%">
+          <img class="demo cursor" src="stargamepics/shipmenu.png" style="width:50%" onclick="currentSlide(2)" alt="The components for the device (disassembled)">
+        </div>
+        <div class="column" style="width: 20%">
+          <img class="demo cursor" src="stargamepics/highscore.png" style="width:50%" onclick="currentSlide(3)" alt="Circuit diagram">
+        </div>
+        <div class="column" style="width: 20%">
+          <img class="demo cursor" src="stargamepics/gameplay.png" style="width:50%" onclick="currentSlide(4)" alt="Choosing a playlist">
+        </div>
+        <div class="column" style="width: 20%">
+          <img class="demo cursor" src="stargamepics/gameover.png" style="width:50%" onclick="currentSlide(5)" alt="Choosing a song">
+        </div>
+      </div>
+    </div>
+    <div id="demo">
+      <h1 style="text-align: left">
+        Video Demo
+      </h1>
+      <iframe src="https://www.youtube.com/embed/1rUoZUNTtQc" class="video" allowfullscreen></iframe>
+    </div>
+    <div id="notes">
+      <h1>
+        Notes
+      </h1>
+    </div>
+    <footer>
+      <a href="#description"><img src="up.png" alt="arrow pointing up" class="arrow"></a>
+      <div class="footer-text"> To top of page </div>
+    </footer>
+  </body>
+</html>

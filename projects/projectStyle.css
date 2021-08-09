@@ -84,6 +84,10 @@ p{
   height: 40vw;
 }
 
+.starimg{
+  width: 200%;
+}
+
 #slideshow{
   grid-area: slideshow;
 }
