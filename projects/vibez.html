@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vibez Music Player</title>
+    <meta name="author" content="Muhammad Zaeem Ghauri">
+    <meta name="keywords" content="personal project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="icon" href="C:/Users/zaeem/OneDrive/Documents/GitHub/Zaeem2001.github.io/logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Roboto|Oswald" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="projectStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="slideshow.js"></script>
+  </head>
+  <body>
+    <div id="headerbar"></div>
+    <div id="header">
+      Vibez Music Player
+    </div>
+    <div id="description">
+      <h1>
+        Description
+      </h1>
+      <p>
+        This is an application that combines emotion recognition with Spotify music playback to give the user music that fits
+        the mood. The user’s PC camera provides a live video feed from which their face is detected and isolated. Then the
+        program recognizes the emotion currently displayed on the user’s face and plays the appropriate public Spotify
+        playlist. It accomplishes this through computer vision and machine learning tools such as OpenCV and Keras.
+      </p>
+      <p>
+        OpenCV is a computer vision library which I used to capture and detect the user’s face in real time. The data collected
+        from the user’s face is then processed by Keras, a deep learning framework. Keras compares the processed data to a model
+        of possible human emotions from which the emotion most likely displayed is chosen. This emotion is then displayed on top
+        of the live camera feed along with a box encompassing the user’s face. Finally, when the user presses the “play music”
+        button in the GUI, Spotify will process the request and return the appropriate playlist.
+      </p>
+    </div>
+    <div id="picture">
+        <img src="vibezpics/vibez.png" class="img vibezimgmain">
+    </div>
+    <div id="slideshow">
+      <h1>
+        Images
+      </h1>
+      <div class="mySlides">
+        <img src="vibezpics/neutral.png" class="img vibezimg">
+      </div>
+      <div class="mySlides">
+        <img src="vibezpics/happy.png" class="img vibezimg">
+      </div>
+      <div class="mySlides">
+        <img src="vibezpics/sad.png" class="img vibezimg">
+      </div>
+      <div class="mySlides">
+        <img src="vibezpics/surprise.png" class="img vibezimg">
+      </div>
+      <div class="mySlides">
+        <img src="vibezpics/angry.png" class="img vibezimg">
+      </div>
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+      <div class="row">
+        <div class="column" style="width: 20%">
+          <img class="demo cursor" src="vibezpics/neutral.png" style="width:80%" onclick="currentSlide(1)" alt="Neutral Zaeem :|">
+        </div>
+        <div class="column" style="width: 20%">
+          <img class="demo cursor" src="vibezpics/happy.png" style="width:80%" onclick="currentSlide(2)" alt="Happy Zaeem :)">
+        </div>
+        <div class="column" style="width: 20%">
+          <img class="demo cursor" src="vibezpics/sad.png" style="width:80%" onclick="currentSlide(3)" alt="Sad Zaeem :(">
+        </div>
+        <div class="column" style="width: 20%">
+          <img class="demo cursor" src="vibezpics/surprise.png" style="width:80%" onclick="currentSlide(4)" alt="Surprised Zaeem :o">
+        </div>
+        <div class="column" style="width: 20%">
+          <img class="demo cursor" src="vibezpics/angry.png" style="width:80%" onclick="currentSlide(5)" alt="Angry Zaeem >:(">
+        </div>
+      </div>
+    </div>
+    <div id="notes">
+      <h1>
+        Notes
+      </h1>
+      <p>
+        This is the final project I worked on, one that I conceptualized since the beginning of Summer 2021. Although it's been
+        complete for a few weeks, it took me until now (Sept. 13th) to get everything up. This was because I’d been working on
+        projects like this one all Summer and (at the time) with 2 weeks left before school, I just wanted to relax and enjoy
+        the rest of my break. Nevertheless, it's here!
+      </p>
+      <p>
+        I left this project at the bottom of my to-do-list since I didn’t think I’d be capable of bringing it to life. Working
+        on my other projects during the Summer showed me just how many great (and free) resources are available on the internet.
+        It also showed me that as long as I’m determined I could bring my ideas to reality, I just had to try. So, just like with
+        my <a href="spotifyplayer.html" target="_blank">Spotiplayer project</a>, I searched the web for ways to have a machine recognize human emotion.
+        And the web brought me to computer vision and machine learning.
+      </p>
+      <p>
+        Prior to this project, I had very little idea what either of those terms meant. I did know that I couldn’t just throw myself
+        into building my program without having some basic knowledge on these topics, so I started with research. I spent the first
+        week just learning about each topic and making sure I understood the common terms and their definitions. I also found frameworks,
+        libraries, and classes associated with them. I learned about OpenCV and TensorFlow, the two most common AI tools when it came to image recognition.
+      </p>
+      <p>
+        Finally, it was time to put the project together (I’ll skip the details). The final product isn’t always consistent with recognizing
+        emotion, however, I’m still very pleased with it. Just like with my other projects, this project has room for improvement and I will
+        definitely try to improve it in the future (particularly the accuracy in emotion recognition).
+      </p>
+      <p>
+        Visit my <a href="https://github.com/Zaeem2001/VibezMusicPlayer" target="_blank">GitHub repo</a> for the project’s code and more information.
+      </p>
+    </div>
+    <footer>
+      <a href="#description"><img src="up.png" alt="arrow pointing up" class="arrow"></a>
+      <div class="footer-text"> To top of page </div>
+    </footer>
+  </body>
+</html>
