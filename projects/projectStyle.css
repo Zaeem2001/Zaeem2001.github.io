@@ -190,6 +190,12 @@ footer{
   padding-top: 1vw;
 }
 
+.home{
+  width: 5%; 
+  padding-top: 1.5vw;
+  
+}
+
 @media (max-width: 800px) {
 
   body{
@@ -278,5 +284,9 @@ footer{
 
   .arrow{
     width: 5vw;
+  }
+  
+  .home{
+	padding-top: 2.2vw;
   }
 }
