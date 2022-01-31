@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pacemaker DCM</title>
+    <meta name="author" content="Muhammad Zaeem Ghauri">
+    <meta name="keywords" content="personal project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="icon" href="C:/Users/zaeem/OneDrive/Documents/GitHub/Zaeem2001.github.io/logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Roboto|Oswald" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="projectStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="slideshow.js"></script>
+  </head>
+  <body>
+    <div id="headerbar"></div>
+    <div id="header">
+      Pacemaker DCM
+	  <a href="https://zaeem2001.github.io/"><img src="home.png" alt="icon of a home" class="home" align="right"></a>
+    </div>
+    <div id="description">
+      <h1>
+        Description
+      </h1>
+      <p>
+        The DCM stands for “Device Controller Monitor”, and as the name suggests, it is the interface that
+        allows users to control the pacemaker device. The pacemaker has several modes, each for a certain
+        situation; for ex. mode for when the patient is at rest vs mode for when the patient is running.
+        Each mode requires different parameters to be set so that the pacemaker functions according to the
+        needs of its patient. The pacemaker is the primary tool to do this; it can set or retrieve parameter
+        data from the pacemaker without being too invasive. This makes it a lot more convenient for doctors
+        to adjust the pacemaker’s behaviours during follow-ups with their patient. This is also safer for the
+        patient since they don’t have to pull the pacemaker out of their body. The DCM also allows doctors to
+        verify the behaviour of the pacemaker through the electrocardiogram which visualizes the heart’s
+        electrical activity. The DCM was implemented entirely in Python using a handful of libraries,
+        most notably: Tkinter, PySerial, and Matplotlib.
+      </p>
+    </div>
+    <div id="picture">
+        <img src="dcmpics/main.png" class="img" style="width: 80%">
+    </div>
+    <div id="slideshow">
+      <h1>
+        Images
+      </h1>
+      <div class="mySlides">
+        <img src="dcmpics/slide1.png" class="img">
+      </div>
+      <div class="mySlides">
+        <img src="dcmpics/slide2.png" class="img">
+      </div>
+      <div class="mySlides">
+        <img src="dcmpics/slide3.png" class="img">
+      </div>
+      <div class="mySlides">
+        <img src="dcmpics/slide4.png" class="img">
+      </div>
+      <div class="mySlides">
+        <img src="dcmpics/slide5.png" class="img">
+      </div>
+      <div class="mySlides">
+        <img src="dcmpics/slide6.png" class="img">
+      </div>
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="dcmpics/slide1.png" style="width:80%" onclick="currentSlide(1)" alt="DCM welcome/landing page">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="dcmpics/slide2.png" style="width:80%" onclick="currentSlide(2)" alt="Registration page for new users">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="dcmpics/slide3.png" style="width:80%" onclick="currentSlide(3)" alt="Login page for existing users">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="dcmpics/slide4.png" style="width:50%" onclick="currentSlide(4)" alt="DCM parameter input window, current mode = AOOR">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="dcmpics/slide5.png" style="width:80%" onclick="currentSlide(5)" alt="Successfully sending data to pacemaker and verifying it">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="dcmpics/slide6.png" style="width:80%" onclick="currentSlide(6)" alt="Atrial and ventricular chamber data from pacemaker plotted in ECG">
+        </div>
+      </div>
+    </div>
+    <div id="notes">
+      <h1>
+        Notes
+      </h1>
+      <p>
+        This is the DCM part of the pacemaker project for my SFWRENG 3K04 course at McMaster during my 3rd
+        year. I worked on this project in a group of 6 which was split into two teams: a team of 4 focused
+        on programming the pacemaker, and a team of 2 focused on the DCM (which I was a part of). The course
+        taught me about the importance of software design principles, architecture, documentation, and
+        testing. All of these concepts had to be implemented in the course project in one way or another.
+      </p>
+      <p>
+        Some of the software design principles that I learned and implemented in the project include modularity,
+        coupling, cohesion, OOP, USES relationship, and information hiding. The DCM design was split up into
+        several modules, each responsible for a specific function of the DCM and independent of the other
+        modules (for the most part). For example, the “registerPage” module is responsible for setting up the
+        DCM’s registration page and has functions committed to placing GUI elements for the user to enter
+        their username and password as well as verifying and writing the data entered.
+      </p>
+      <p>
+        A challenge that my team faced was connecting the DCM windows to one another as Tkinter requires a
+        reference to a Tkinter window in order to connect it with others. This could have been done by
+        placing each window into one module and passing the references as global variables, however we
+        tried this and the code got messy quickly. Instead we opted to use OOP, each window is its own
+        object of which an instance can be created and passed to the module of the top level window that
+        it connects to. For example, the welcome page (top level) creates instances of the login and
+        registration pages in order to connect them with the rest of the DCM.
+      </p>
+      <p>
+        There was still some level of dependence between modules as they had to connect with one another and
+        in some cases use each other's functions. This meant I had to consider USES relationships between
+        each module, for ex. the “pmParams” module uses functions from the “paramChecking” and “pacemakerModes”
+        modules, which in turn uses the “writePMParams” module. Each function also had to be implemented with
+        information hiding in mind so that they wouldn’t affect the behaviour of module’s using them.
+        Information hiding is the idea of hiding a system’s (or function in this case) implementation from
+        users. This makes it easier for users to use the system as they only need to know what they can input
+        and what they should expect as an output. Furthermore, any changes to the implementation of the
+        function won’t affect the modules that have used them as they only have to provide inputs to the function.
+      </p>
+      <p>
+        The implementation of these principles made debugging and testing the DCM a lot simpler. Each module
+        could be tested separately because of the low coupling between modules. Any bugs that were
+        encountered during the testing of a module could be found in that module because of this property.
+        Furthermore, the USES relationship told me what order to test the modules in as I couldn’t test the
+        parents (users) before testing the childrens (used). Most functions could be tested through black-box
+        tests as they could be given inputs and provided outputs which could be analyzed to make sure the
+        behaviour is as expected.
+      </p>
+      <p>
+        The development period had its fair share of problems outside of just missing brackets and semicolons
+        during debugging. There were a few challenges with working in a team of 6, especially since it was my
+        first time working in a team this large and we had to split the team in two to work on different parts
+        of the project. These challenges got more difficult with COVID interfering with the regular operations
+        of the course and making it difficult for the team to meet in person.
+      </p>
+      <p>
+        In the past, this course was in-person but thanks to COVID everything had to be pushed online and thus
+        multiple changes had to be made to the requirements of the course project. To start, the course project
+        began a lot later than it should have because the pacemaker development kits had to be shipped to students
+        internationally and so we had to wait for everybody to get their kits. This timeline change led to some
+        modifications to the project specification documentations, however these changes were not properly communicated
+        by the TA’s (teacher’s assistants) which led to confusion within groups. In my case, I believed we had to account for
+        all the pacemaker parameters and did so in the DCM. However when I met with my group later that week I was told that
+        wasn’t the case and instead the specifications had been changed during a lab session I didn’t attend which led to a disagreement.
+        In order to clear up the mistake we consulted the head TA which clarified that my teammates were
+        indeed correct and led to the specification document getting updated.
+      </p>
+      <p>
+        COVID also made it difficult for communication between teams. When the course was in-person, teams
+        would meet up in assigned lab sessions to work on the pacemaker where they could get live feedback
+        from each other and even consult TAs. With everything now being online, our group had to find a new
+        workflow and method of communication between each other and TAs. As a team we elected to have one
+        mandatory meeting every week on the Discord app where we would discuss each sub-team’s progress and
+        any points we needed clarifications from the TAs on. We communicated more often in our sub-teams to
+        discuss what each member was working on, clarification with each other’s implementations, and choosing
+        a version control platform (my partner and I chose Github). During the integration phase (where the
+        DCM had to properly communicate with the pacemaker to have a working system) at least one member from
+        both teams had to be present.
+      </p>
+      <p>
+        Thanks to the struggles and the experience I’ve gained from this course, I feel that I’ve become a
+        stronger programmer and team member. I’ve strived to implement these software principles in whatever
+        software project I’ve worked on ever since (like my team’s OEC device). I’ve also made sure that I’m
+        communicating regularly with my teammates to make sure everyone is on the same page. I do wish that I
+        could improve certain aspects of the project which had to be rushed due to time constraints like the
+        UI of the DCM and the readability of the code. Unfortunately, I don’t think I’ll get the chance to
+        change much since the pacemaker kits had to be returned after the course was finished. Nonetheless,
+        I still have the experience and knowledge that I’ve gained from the course and I’m grateful for it.
+      </p>
+      <p>
+        Visit my <a href="https://github.com/Zaeem2001/PacemakerDCM" target="_blank">GitHub repo</a> for the project’s code and more information.
+      </p>
+    </div>
+    <footer>
+      <a href="#description"><img src="up.png" alt="arrow pointing up" class="arrow"></a>
+      <div class="footer-text"> To top of page </div>
+    </footer>
+  </body>
+</html>
